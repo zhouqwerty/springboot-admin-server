@@ -24,6 +24,9 @@
 	<dependencies>
 
 		<!--admin server-->
+		<!--只要app注册到注册中心，就会在admin界面看到注册的app。
+		    但是如果注册的app没有actuator，那么点击详情界面是会
+		    报404错误的-->
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-starter-server</artifactId>
