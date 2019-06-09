@@ -17,14 +17,17 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<eureka.version>1.4.4.RELEASE</eureka.version>
+		<!--2.0.3版本的admin server下载不了，因此使用2.0.1版本-->
+		<springboot.admin.version>2.0.1</springboot.admin.version>
 	</properties>
 
 	<dependencies>
+
+		<!--admin server-->
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-starter-server</artifactId>
-			<version>2.0.1</version>
+			<version>${springboot.admin.version}</version>
 		</dependency>
 
 		<dependency>
@@ -32,28 +35,10 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-			<version>1.4.4.RELEASE</version>
-		</dependency>-->
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-			<version>${eureka.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-feign</artifactId>
-			<version>${eureka.version}</version>
-		</dependency>
-
-		<!--<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
